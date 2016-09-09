@@ -1,0 +1,11 @@
+%META:TOPICPARENT{name="AutoSubPlugin"}%
+#VarNOAUTOSUB
+---+++ NOAUTOSUB{...} -- disable a text substitution for a wiki page
+   * Parameters:
+      | *Parameter* | *Description* | *Default* |
+      | name        | Text to auto-replace | none, required parameter |
+
+If a link/substitution has been defined for the text specified by the "name" parameter, this will prevent that text from being substituted in the page on which this macro is used.
+
+This may be useful if, for example, a list of AUTOSUB macros is used on a topic being included on a page where the including topic does not want the substitution to be made.
+

@@ -1,0 +1,6 @@
+%META:TOPICPARENT{name="AutoSubPlugin"}%
+#VarAUTOSUBS
+---+++ AUTOSUBS -- Generate a table of all known links/substitutions
+   * Syntax: =%<nop>AUTOSUBS%=
+   * =%<nop>AUTOSUBS%= generates a table in place containing all links/substitutions known to this plug-in, which are only those in the topic page in which this macro appears and any included topics.
+

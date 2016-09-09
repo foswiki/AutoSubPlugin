@@ -1,0 +1,70 @@
+%META:TOPICPARENT{name="Plugins"}%
+---+ Auto Sub Plugin
+<!--
+One line description, required for extensions repository catalog.
+   * Set SHORTDESCRIPTION = Plugin designed to substitute links (or any other formatting) for wiki-words and non-wiki-words alike.
+-->
+
+%SHORTDESCRIPTION%
+
+%TOC%
+
+---++ Macros
+
+Gives the ability to do substitution of text in a wiki document, which may include things like:
+   1 Automatic formatting of keywords
+   1 Automatic linking of keywords
+   1 Translation of keywords
+
+%INCLUDE{VarAUTOSUB}%
+
+%INCLUDE{VarAUTOSUBS}%
+
+%INCLUDE{VarNOAUTOSUB}%
+
+---++ <nop>%TOPIC% Settings
+
+You can override the default settings as documented in [[%SYSTEMWEB%.PreferenceSettings][preferences]]. These preferences can be set in your %USERSWEB%.SitePreferences, or in !WebPreferences, or in individual topics.
+
+| *Preference* | *Use to* | *Default* |
+| =AUTOSUBPLUGIN_DEBUG= | Enable debugging output, which is stored in files in the plug-in's work area on the server and is not accessible via the web | 0 |
+| =AUTOSUBPLUGIN_PROTECTED= | Specify HTML or HTML-style tags to be protected from substitutions by this plug-in | "pre noautolink dot verbatim plantuml" |
+
+If the protected tags value is changed, it is *strongly* recommended that ==pre== and ==noautolink== remain in the list, at the beginning and in that order.
+
+---++ Examples
+Examples can be found in Sandbox.AutoSubPluginExamples.
+
+---++ Plugin Installation Instructions
+You do not need to install anything in the browser to use this extension. The following instructions are for the administrator who installs the extension on the server.
+
+---+++ Installation
+Open configure, and open the "Extensions" section. Use "Find More Extensions" to get a list of available extensions. Select "Install".
+
+If you have any problems, or if the extension isn't available in =configure=, then you can still install manually from the command-line. See http://foswiki.org/Support/ManuallyInstallingExtensions for more help.
+
+---+++ Dependencies
+No dependencies.
+
+---++ Known Bugs
+None.
+
+---++ TODO
+
+---++ Plugin Info
+
+|  Change&nbsp;History: | <!-- versions below in reverse order -->&nbsp; |
+|  13 Aug 2015 | 1.0.0 Initial release. |
+
+
+
+%META:FORM{name="PackageForm"}%
+%META:FIELD{name="Author" title="Author" value="Foswiki:Main.JohnKnutson"}%
+%META:FIELD{name="Version" title="Version" value="v1.0.0"}%
+%META:FIELD{name="Release" title="Release" value="1.0.0"}%
+%META:FIELD{name="Repository" title="Repository" value="https://github.com/foswiki/AutoSubPlugin"}%
+%META:FIELD{name="Copyright" title="Copyright" value="&copy; 2015, Applied Research Laboratories, the University of Texas at Austin"}%
+%META:FIELD{name="License" title="License" value="[[%25ATTACHURLPATH%25/COPYING.txt][GPLv3]]"}%
+%META:FIELD{name="Home" title="Home" value="http://foswiki.org/Extensions/AutoSubPlugin"}%
+%META:FIELD{name="Support" title="Support" value="http://foswiki.org/Support/AutoSubPlugin"}%
+%META:FILEATTACHMENT{name="COPYING.txt" attachment="COPYING.txt" attr="" comment="GNU General Public License v3" date="1417819886" path="COPYING.txt" size="35147" user="ProjectContributor" version="1"}%

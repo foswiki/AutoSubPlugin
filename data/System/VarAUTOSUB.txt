@@ -1,0 +1,8 @@
+%META:TOPICPARENT{name="AutoSubPlugin"}%
+#VarAUTOSUB
+---+++ AUTOSUB{...} -- define text substitutions for wiki pages
+   * Parameters:
+      | *Parameter* | *Description* | *Default* |
+      | name        | Text to auto-replace | none, required parameter |
+      | fmtMacro    | Replacement text.  May be a wiki macro, however, the wiki macro being substituted may not encorporate other macros.  If this is done, the wiki will complain to the administrator. | none - no substitution |
+

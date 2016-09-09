@@ -1,0 +1,11 @@
+data/Sandbox/AutoSubPluginExamples.txt 0664
+data/Sandbox/PluginTestAutoSubPlugin.txt 0444
+data/System/AutoSubPlugin.txt 0444
+data/System/VarAUTOSUB.txt 0444
+data/System/VarAUTOSUBS.txt 0444
+data/System/VarNOAUTOSUB.txt 0444
+lib/Foswiki/Plugins/AutoSubPlugin.pm 0444
+lib/Foswiki/Plugins/AutoSubPlugin/Config.spec 0444
+pub/System/AutoSubPlugin/COPYING.txt 0444
+test/unit/AutoSubPlugin/AutoSubPluginSuite.pm 0444
+test/unit/AutoSubPlugin/AutoSubPluginTests.pm 0444

@@ -1,0 +1,46 @@
+%META:TOPICPARENT{name="AutoSubPlugin"}%
+---+!! Auto Sub Plugin Examples
+
+%TOC%
+
+---++ Tests
+
+   * Set AUTOSUBPLUGIN_DEBUG = 1
+
+Links that shouldn't be corrupted:
+   * [[WebHome][no foo corruption]]
+   * http://www.google.com/foo/bar
+   * mailto:foo@bar.com
+
+---++ Formatting Macros
+Examples of how AutoSubPlugin might be used.  First, a series of formatting macros that are not directly associated with the plugin.
+
+   * Set ASPEXAPPFMT = <code><b>%DEFAULT%</b></code>
+   * Set ASPEXDATAFMT = <i><b>%DEFAULT%</b></i>
+   * Set ASPEXAPP = <code><b>[[Main.ASPEXApp%DEFAULT%][%DEFAULT%]]</b></code>
+   * Set AUTOSUBPLUGIN_DEBUG = 0
+
+---++ Plugin Macro Usage
+
+Note that in the following table, the rendered macros will be blanks.  Only in the example usage of substitutions after the table should any obvious effects be present.
+
+| *You Type* | *You Get* |
+| <verbatim>%ASPEXAPPFMT{helloWorld}%</verbatim> <br/>(non-plugin example) | %ASPEXAPPFMT{helloWorld}% |
+| <verbatim>%AUTOSUB{"foo" repl="%ASPEXAPP{foo}%"}%</verbatim> | %AUTOSUB{"foo" repl="%ASPEXAPP{foo}%"}% |
+| <verbatim>%AUTOSUB{name="bar" repl="%ASPEXDATAFMT{bar}%"}%</verbatim> | %AUTOSUB{name="bar" repl="%ASPEXDATAFMT{bar}%"}% |
+| <verbatim>%AUTOSUB{"sampapp2" repl="%ASPEXAPP{sampapp2}%"}%</verbatim> | %AUTOSUB{"sampapp2" repl="%ASPEXAPP{sampapp2}%"}% |
+
+---++ Substitution Usage
+
+The following table is meant to show how text is automatically substituted, based on the macros used above.
+
+| *You Type* | *You Get* |
+| <verbatim>The application foo produces data type bar when it runs.  So there.</verbatim> | The application foo produces data type bar when it runs.  So there. |
+| <verbatim>But if this !foo is linked, there's a problem.  Also if this <nop>bar is linked.</verbatim> | But if this !foo is linked, there's a problem.  Also if this <nop>bar is linked. |
+| <verbatim><noautolink>None of this foo text should be bar linked.</noautolink></verbatim> | <noautolink>None of this foo text should be bar linked.</noautolink> |
+| <verbatim>sampapp2 should be linked but probably will not link to an existing topic.</verbatim> | sampapp2 should be linked but probably will not link to an existing topic. |
+
+---++ Substitution Table
+
+The following table is the list of substitutions known in this topic, as produced by <verbatim>%AUTOSUBS%</verbatim>.
+%AUTOSUBS%
